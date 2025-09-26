@@ -1,0 +1,48 @@
+{
+    "name": "Documentation Container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "USER_UID": "${localEnv:USER_UID}",
+            "USER_GID": "${localEnv:USER_GID}",
+            "USERNAME": "${localEnv:USERNAME}"
+        }
+    },
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    "runArgs": [
+        "-e",
+        "USER_UID=${localEnv:USER_UID}",
+        "-e",
+        "USER_GID=${localEnv:USER_GID}"
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "latex-workshop.latex.tools": [
+                    {
+                        "name": "pdflatex",
+                        "command": "pdflatex",
+                        "args": [
+                            "-interaction=nonstopmode",
+                            "-synctex=1",
+                            "%DOC%"
+                        ]
+                    }
+                ],
+                "latex-workshop.latex.recipes": [
+                    {
+                        "name": "pdflatex",
+                        "tools": [
+                            "pdflatex"
+                        ]
+                    }
+                ]
+            },
+            "extensions": [
+                "James-Yu.latex-workshop"
+            ]
+        }
+    }
+}

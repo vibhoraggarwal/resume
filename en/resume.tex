@@ -1,0 +1,336 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\usepackage{anyfontsize}
+\usepackage{hyperref}
+\usepackage{datenumber,fp}
+\usepackage{ifthen}
+\usepackage{epstopdf}
+\usepackage{pstricks}
+\usepackage[most]{tcolorbox}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\newtcbox{\inlinebox}[1][]{enhanced,
+ box align=base,
+ nobeforeafter,
+ colback=mainblue,
+ %colframe=Black,
+ size=small,
+ left=0pt,
+ right=0pt,
+ boxsep=2pt,
+ #1}
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{img/vibhor_b.jpg} % Profile picture
+\cvname{Vibhor Aggarwal} % Your name
+\cvjobtitle{{\fontsize{9.2}{12}\selectfont Software dev. and simulation engineer-\\}{\fontsize{9.2}{10}\selectfont Automated driving}} % Job title/career
+%AGE
+\usepackage{ifthen}
+\newcounter{myage}
+\setcounter{myage}{\the\year}
+\addtocounter{myage}{-1996}
+\ifthenelse{\the\month<02}{\addtocounter{myage}{-1}}{}
+\ifthenelse{\the\month=02}{
+  \ifthenelse{\the\day < 24}{\addtocounter{myage}{-1}}{}
+}{}
+
+
+
+\cvdate{24 February, 1996 (\themyage\hspace{0.5pt}$^{\#}$ Years)}% Date of birth (DOB)
+\cvaddress{Stuttgart, Germany} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{(+49)17659896222} % Phone number
+\cvsite{\href{https://vibhoraggarwal.github.io}{vibhoraggarwal.github.io}} % Personal website
+\cvmail{{\fontsize{9.42}{5}\selectfont vibhorag24@gmail.com}} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+%\aboutme{Passionately follows and work on Automotive and Robotics research} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+\skills{{Gazebo, Carla, \href{https://github.com/protocolbuffers/protobuf}{Protobuf}, \href{https://github.com/OpenSimulationInterface}{OSI}, \href{https://fmi-standard.org/}{FMI}/3},
+{FEA (Ansys, Abaqus)/3},
+{Middleware (ROS, \href{https://www.yarp.it/latest/}{YARP}, \href{https://edms.etas.com/}{EDMS})/5},
+{conan, git, QNX, Linux /5},
+{CAD (Solidworks, Autodesk Inventor)/5},
+{Matlab, Simulink/5},
+{C++, Python, CMake/5}}
+%------------------------------------------------
+% Language Section
+\languages{{Italian, French, Spanish/2},
+{German/5},
+%{Hindi/6},
+{English, Hindi/6}}
+%------------------------------------------------
+%\includegraphics[scale=1]{qr-vibhoraggarwal-.eps}
+%\href{https://vibhoraggarwal.github.io}{\qrcode{qr-vibhoraggarwal-.eps}}
+\qrcode{qr-vibhoraggarwal-.eps}
+
+\makeprofile
+%----------------------------------------------------------------------------------------
+%	 SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Summary}
+
+Automotive engineer experienced with robotics/ADAS sys., middleware and apps
+%automated driving concepts.
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\href{https://www.rwth-aachen.de/go/id/a/?lidx=1}{RWTH Aachen, Germany} \\
+{\sl M.Sc, Automotive Engineering } \hfill 2021 \\\vspace{-0.8cm} \\
+%Thesis: Topic: "New standards in Verification and Validation setups for automotive applications"
+
+\href{https://www.iitk.ac.in/}{Indian Institute of Technology Kanpur (IIT), India} \\
+{\sl B.Tech, Major: Mechanical Engineering }%\hfill CGPA 6.6/10
+  \hfill %July 2013-June
+  2017 \\
+\phantom{x}\hspace{5.3ex} {\sl Minor: Applied Mathematics}\\
+
+%----------------------------------------------------------------------------------------
+%	 EACHIEVEMENT AND AWARDS
+%----------------------------------------------------------------------------------------
+\section{Achievement and Awards}
+
+\textbf{Best Under-Graduate project} in Mechanical Engineering: IIT Kanpur\hfill2017 \\
+\textbf{Ranjan Kumar Memorial Award} for \textbf{best socially relevant project}: IIT Kanpur\hfill2017\\
+Ranked \textbf{3rd} in state and 914th nationally among 1.4 million students in JEE\hfill2013 \\
+%Ranked 103 in National level Science Talent  Search Examination by Unified Council\\
+\textbf{Gold Medal} in National Mathematics Olympiad: AISMTA\hfill2013
+%----------------------------------------------------------------------------------------
+%	 PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%\section{Publications}
+
+%\begin{twentyshort} % Environment for a short list with no descriptions
+%	\twentyitemshort{1865}{Chapter One, Down the Rabbit Hole.}
+%	\twentyitemshort{1865}{Chapter Two, The Pool of Tears.}
+%	\twentyitemshort{1865}{Chapter Three,  The Caucus Race and a Long Tale.}
+%	\twentyitemshort{1865}{Chapter Four,  The Rabbit Sends a Little Bill.}
+%	\twentyitemshort{1865}{Chapter Five,  Advice from a Caterpillar.}
+%	%\twentyitemshort{<dates>}{<title/description>}
+%\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 AWARDS
+%----------------------------------------------------------------------------------------
+
+
+
+%\begin{twentyshort} % Environment for a short list with no descriptions
+%	\twentyitemshort{Best Under-Graduate project in Mechanical Engineering department of\\ IIT Kanpur\hfill}{2017}
+%	\twentyitemshort{2017}{Ranjan Kumar Memorial Award for the best socially relevant project at IIT
+%Kanpur}
+%	\twentyitemshort{2013}{Ranked 3rd in state and 914 nationally among 1.4 million students in JEE}
+%	\twentyitemshort{2013}{Gold Medal in National Mathematics Olympiad conducted by AISMTA}
+%\end{twentyshort}
+
+%\begin{myTable2}
+ %   Best Under-Graduate project in Mechanical Engineering department of IIT Kanpur \hfill & 2017\\
+  %  Ranjan Kumar Memorial Award for the best socially relevant project at IIT Kanpur \hfill & 2017 \\
+   % Ranked 3rd in state and 914 nationally among 1.4 million students in JEE  \hfill  & 2013\\
+    %Gold Medal in National Mathematics Olympiad conducted by AISMTA  \hfill & 2013\\
+
+%\end{myTable2}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\href{https://www.etas.com/en/}{ETAS GmbH, Stuttgart} \hfill \faMapMarker \hspace{0.02pt} Germany \\
+{\sl Software engineer and Scrum master}\hfill Oct'22-Present$^{\#}$\\
+\vspace{-0.6cm}
+\begin{itemize}%[noitemsep]
+    \item Developed functionalities for the Security Functional Cluster of the ETAS VRTE, an AUTOSAR Adaptive-based micro processor platform
+    \item Developed and delivered \href{https://edms.etas.com/}{middleware (MW) and SDK} for high-performance, safety-critical ADAS/AD applications for QNX-based targets
+    \item Collaborated w/ customers in Asia and EU to integrate MW w/ their tech stacks
+\end{itemize}
+{\sl Simulation engineer for automated driving}\hfill May'21-Oct'22 \\
+%\href{https://www.etas.com/en/}{ETAS GmbH, Stuttgart} %\hfill{\fontsize{8.5}{20}\selectfont Bosch subsidiary for Embedded system support}
+\vspace{-0.6cm}
+\begin{itemize}%[noitemsep]
+	\item Model based simulation for public funded project for AD, \href{https://setlevel.de/}{SET Level}
+\end{itemize}
+{\sl ADAS simulation engineer intern/master thesis}
+%\inlinebox{\small\color{white}C++}
+%\inlinebox{\small\color{white}FMI} \inlinebox{\small\color{white}\href{https://github.com/protocolbuffers/protobuf}{Protobuf}}
+\hfill Jun'20-May'21 \\
+%\href{https://www.etas.com/en/}{ETAS GmbH, Stuttgart} %\hfill{\fontsize{8.5}{20}\selectfont Bosch subsidiary for Embedded system support}
+\vspace{-0.6 cm}
+\begin{itemize}%[noitemsep]
+	%\item Logging and tracing \href{https://opensimulationinterface.github.io/osi-documentation/open-simulation-interface/README.html}{OSI} messages using in \href{https://www.etas.com/en/products/cosym-co-simulation-platform.php}{COSYM}, a co-simulation software
+	\item New Modelica/ASAM standards in V\&V setups for automotive applications
+	%\item Generating FMU models, using OSMP for ADAS SiL simulation
+
+
+\end{itemize}
+\href{https://www.irt.rwth-aachen.de/go/id/iung/?lidx=1}{Institute of Automatic Control, RWTH Aachen} \hfill \faMapMarker \hspace{0.02pt} Germany\\
+{\sl Student research assistant} \hfill  May'19-Mar'20
+%\inlinebox{\small\color{white}C++} \inlinebox{\small\color{white}Simulink}
+
+%Supervisor: M.Sc. Martin Kosch,
+
+\begin{itemize}%[noitemsep]
+    %\item  Sensor fusion for Navigation and path planning of an Unmanned Aerial Vehicle
+	%\item Created a C++ framework using inter-process-communication via UDP
+	\item Sensor fusion, DAQ and time synchronisation among IMU and GNSS sensors
+\end{itemize}
+
+\href{https://iit.it/}{Italian Institute of Technology, Genova} \hfill \faMapMarker \hspace{0.02pt} Italy\\
+{\sl Research Fellow for humanoid robotics}  \hfill Nov'17-Aug'18
+%\inlinebox{\small\color{white}C++}
+%\inlinebox{\small\color{white}Gazebo}
+%\inlinebox{\small\color{white}Simulink}
+%\inlinebox{\small\color{white}\href{https://www.yarp.it/}{YARP}}
+
+%Guide: Dr. Daniele Pucci, \href{https://dic.iit.it/}{DIC lab} \hfill {\fontsize{8}{20}\selectfont Research center for Human-Robot Collaboration }\\
+
+
+\begin{itemize}%[noitemsep]
+	\item  Implemented low level torque control framework for Humanoid robot, iCub
+	%\item  Identified \textbf{transfer function} between Voltage and iCub's joints' torque
+
+\end{itemize}
+
+\href{https://www.heromotocorp.com/en-in/}{Hero Motocorp Ltd, Haridwar %India
+} \hfill \faMapMarker \hspace{0.02pt} India\\
+{\sl Graduate Engineer Trainee} \hfill Jul'17-Oct'17
+%\inlinebox{\small\color{white}MS Excel} \inlinebox{\small\color{white}TPM}
+
+
+%\hfill {\fontsize{8.5}{20}\selectfont World's largest two-wheeler company}
+
+\begin{itemize}%[noitemsep]
+	\item Managed TPM for machine quality, process inspection and resource planning
+%\item Produced machined parts by programming and setting up the CNC machine
+	%maintaining quality and safety standards
+
+
+\end{itemize}
+Grey Orange Robotics Pvt. Ltd, Gurugram \hfill \faMapMarker \hspace{0.02pt} India\\
+{\sl Mechanical design engineer intern} \hfill May'16-Jul'16
+\begin{itemize}%[noitemsep]
+	\item Designed suspension system of a material handling Automated Guided Vehicle
+\end{itemize}
+%----------------------------------------------------------------------------------------
+%	 Projects
+
+\section{Projects}
+
+\href{https://www.youtube.com/watch?v=ExcLjyNvF9I&feature=emb_title}{{\sl{Robotic Exoskeleton Arm, IIT Kanpur}  }}
+%\inlinebox{\small\color{white}CAD}
+%\inlinebox{\small\color{white}FEA}
+%\inlinebox{\small\color{white}Matlab}
+\hfill Aug'16-Apr'17
+%Guide: Dr. Sumit Basu, IIT Kanpur
+%, India
+%\hfill{\fontsize{8.5}{20}\selectfont Best Under graduate project at IIT Kanpur}
+\begin{itemize}%[noitemsep]
+%\item Developed Pnematic Air Muscles (Proportional pressure pneumatics)
+\item Provided improved mobility to people in old age and Cerebral Palsy patients
+
+%\item \bf{Exoskeleton arm} that increases mobility and is easily controlled by voice using an Android app, Bluetooth module and arduino.
+%\item Actuated using \textbf{Pneumatic Air Muscles}(PAM) made of Latex material,used as a woven shell and Polyethylene Terephthalate, used for loose weave working on the principle of proportional pressure  pneumatics
+%\item Simulated the non-linear model on Ansys, and tested it experimentally
+%\item Structure of the project is made completely of Glass Fibre Reinforced Plastic resulting
+%\item Helps people affected from \textbf{Cerebral Palsy} and old age arm weakness
+\end{itemize}
+\href{https://www.youtube.com/watch?v=8xSa60V9X4c&feature=emb_title}{{\sl{Off-road Vehicles, IIT Kanpur}  }}
+%\inlinebox{\small\color{white}CAD}
+%\inlinebox{\small\color{white}FEA}
+%\inlinebox{\small\color{white}Matlab}
+\hfill Dec'13-Jan'16
+%Guide: Dr. Avinash Kumar Agarwal, IIT Kanpur %\hfill{\fontsize{8.5}{20}\selectfont For Event similar to FSAE \& Baja SAE}
+\begin{itemize}%[noitemsep]
+\item Created/optimised mathematical models for multi link suspension systems
+%\item Rated as one of top 5 teams for design from more than 45 national teams
+%\item Calculated and optimized the Suspension parameters for the vehicle on "Lotus Suspension Simulation"
+%\item Designed the front hub of the vehicle on Solidworks and did its FEA and weight optimization on Ansys
+%\item Developed a Mathematical model on MATLAB for the vehicle's Suspension system to calculate forces
+%\item Team won the "Best Technical Ready team" in 2016 for "B16" at Baja Student India conducted by Delta Shootout Inc
+%\item The vehicle "B16" was awarded 5th for its design and 4th in Acceleration among 43 national teams
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	 Other Information
+%----------------------------------------------------------------------------------------
+
+\section{Additional Information}
+
+\begin{itemize}%[noitemsep]
+	\item Led the Motorsports team at IIT Kanpur, with more than 25 members.
+	%Eventually being the Best-technical ready team in the competition
+	\item Interested in
+	% Psychology,
+	Kung fu, Tango, Cycling, Running, Abstract expr., Philosophy
+%Neurology
+	%maintaining quality and safety standards
+
+
+\end{itemize}
+
+\begin{footnotesize}
+\begin{flushright}\# Last updated: \today \end{flushright}
+\end{footnotesize}
+%----------------------------------------------------------------------------------------
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\makeprofile % Print the sidebar
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
